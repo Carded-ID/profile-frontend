@@ -2,11 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90vw;
 }
 
 .text {
   color: black;
   width: max-content;
+  max-width: 100%;
+  text-align: center;
 }
 .name {
   font-weight: 700;

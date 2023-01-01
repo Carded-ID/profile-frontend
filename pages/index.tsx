@@ -14,7 +14,7 @@ const UserPage: NextPage<UserPageProps> = ({ user }) => {
   return (
     <>
       <Head>
-        <title>{user?.name || "User Not Found"} | Carded.Id</title>
+        <title>{`${user?.name || "User Not Found"} | Carded.ID`}</title>
         <meta name="description" content="Carded.Id" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* TODO: Favicon */}
@@ -28,11 +28,12 @@ const UserPage: NextPage<UserPageProps> = ({ user }) => {
             width={120}
             height={120}
             alt="User Profile Picture"
+            priority
           />
-          <UserInfo />
+          <UserInfo name={user.name} bio={user.bio} />
           <div className={styles.linksContainer}>
-            {user.links.map((linkData) => (
-              <LinkItem linkData={linkData} />
+            {user.links.map((linkData, index) => (
+              <LinkItem linkData={linkData} key={index} />
             ))}
           </div>
           <footer className={styles.footer}>
