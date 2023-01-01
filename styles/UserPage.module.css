@@ -1,0 +1,32 @@
+.main {
+  display: grid;
+  grid-template-rows: max-content max-content auto max-content;
+  justify-items: center;
+  background-color: aliceblue;
+  height: 100vh;
+  width: 100vw;
+  padding: 45px 20px 15px;
+  gap: 25px;
+}
+
+.profilePicture {
+  border-radius: 50%;
+}
+
+.linksContainer {
+  max-width: 90vw;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer {
+  font-family: var(--text-font);
+  font-size: 0.8rem;
+}
+
+.footerLink {
+  color: var(--carded-primary);
+  text-decoration: solid;
+}
